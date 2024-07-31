@@ -8,7 +8,6 @@ class Animation1Screen extends StatefulWidget {
 }
 
 class _Animation1ScreenState extends State<Animation1Screen> {
-  int index = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -49,8 +48,7 @@ class _Animation1ScreenState extends State<Animation1Screen> {
                           children: [
                             InkWell(
                               onTap: () {
-                                Navigator.pushNamed(context, "animation",
-                                    arguments: index);
+                                Navigator.pushNamed(context, "animation", arguments: index);
                               },
                               child: Align(
                                 alignment: Alignment.topCenter,
@@ -60,9 +58,9 @@ class _Animation1ScreenState extends State<Animation1Screen> {
                                   decoration: BoxDecoration(
                                       color: Colors.orange.shade100,
                                       borderRadius: BorderRadius.circular(10)),
-                                  child: const Hero(
-                                    tag: "DemoTag",
-                                    child: Align(
+                                  child:Hero(
+                                    tag: "$index",
+                                    child: const Align(
                                       alignment: Alignment.center,
                                       child: Image(
                                         image: AssetImage(

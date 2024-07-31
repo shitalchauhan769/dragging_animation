@@ -6,7 +6,7 @@ class AnimationProvider with ChangeNotifier
 
   void changButton()
   {
-    isClike!=isClike;
+    isClike=!isClike;
     notifyListeners();
   }
 }
